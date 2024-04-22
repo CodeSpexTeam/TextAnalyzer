@@ -1,16 +1,16 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-import About from './components/About';
+// import About from './components/About';
 import { useState } from 'react';
 import Alert from './components/Alert';
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-  } from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route
+//   } from "react-router-dom";
 
 function App() {
 
@@ -48,11 +48,12 @@ function App() {
   return (
 
    <>
-   <Router>
+   {/* <Router> */}
    <Navbar title = "Code Hub"  mode={mode} onSwitchMode={onSwitchMode} aboutPage="About us"/>
    <div className="container my-3" >
    <Alert alert = {alert} />
-   <Switch>
+   <TextForm heading="Enter The Text to analyze below" mode={mode} />
+   {/* <Switch>
     <Route path="/about">
       <About />
     </Route>    
@@ -60,9 +61,9 @@ function App() {
       <TextForm heading="Enter The Text to analyze below" mode={mode} />
     </Route>     
           
-    </Switch>
+    </Switch> */}
     </div>
-   </Router>
+   {/* </Router> */}
    </>
   );
 }
